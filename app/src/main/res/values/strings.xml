@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="clic_me">clic me</string>
+    <string name="i_done_it">I done it</string>
+    <string name="todo">TODO</string>
+    <string name="TODO">TODO</string>
+</resources>
