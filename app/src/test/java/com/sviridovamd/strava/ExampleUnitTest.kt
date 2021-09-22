@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.sviridovamd.strava
 
 import org.junit.Test
 
