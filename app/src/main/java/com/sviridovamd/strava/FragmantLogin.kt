@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import timber.log.Timber
 
 class FragmantLogin : Fragment(R.layout.fragment_login) {
     private var pass: TextInputEditText? = null
@@ -64,14 +65,38 @@ class FragmantLogin : Fragment(R.layout.fragment_login) {
             if (model.loginState.value == true)
                 findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
         }
-        //Автоматическое нажатие на кнопки при валидном вводе+нажатии Enter
+        //enter
         pass?.setOnEditorActionListener { _, _, _ ->
             if (model.loginState.value == true) {
                 loginBtn?.performClick()
             }
             return@setOnEditorActionListener (model.loginState.value != true)
         }
+
+
     }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.e("onStart ${hashCode()}")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.d("onResume ${hashCode()}")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.d("onPause ${hashCode()}")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.d("onStop ${hashCode()}")
+    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -81,4 +106,6 @@ class FragmantLogin : Fragment(R.layout.fragment_login) {
         emailLayout = null
         loginBtn = null
     }
+
+
 }

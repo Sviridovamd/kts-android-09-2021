@@ -41,4 +41,8 @@ class AppViewModel() : ViewModel() {
         private const val PASSWORD_MIN_LENGTH: Int = 8
     }
 
+
+
+
+
 }
