@@ -4,10 +4,6 @@
     <string name="i_done_it">I DONE IT</string>
     <string name="todo">TODO</string>
     <string name="TODO">TODO</string>
-    <string name="onboarding_hi">START WITH STRAVA!</string>
-    <string name="onboarding_start">GO</string>
-    <string name="onboarding_hand">Hi hand</string>
-    <string name="onboarding_description">The #1 app for runners and cyclists</string>
     <string name="login_password">Password</string>
     <string name="login_login">Login</string>
     <string name="login_email">Email</string>
@@ -15,4 +11,8 @@
     <string name="login_email_warning">Is not email!</string>
     <string name="login_enter_your_email">Enter your email…</string>
     <string name="login_enter_your_password">Enter your password…</string>
+    <string name="onboarding_hi">START WITH STRAVA!</string>
+    <string name="onboarding_start">GO</string>
+    <string name="onboarding_hand">Hi hand</string>
+    <string name="onboarding_description">The #1 app for runners and cyclists</string>
 </resources>

@@ -22,7 +22,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_app_name"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.62"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/login_app_name"
@@ -58,13 +59,14 @@
         app:layout_constraintLeft_toLeftOf="@id/guideline_w_start"
         app:layout_constraintRight_toRightOf="@id/guideline_w_end"
         android:layout_margin="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_field"
-            android:hint="@string/login_enter_your_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/login_enter_your_email"
             android:inputType="textEmailAddress"
-            android:singleLine="true"/>
+            android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -100,15 +102,18 @@
             android:inputType="textPassword"
             android:singleLine="true"/>
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/login_button"
-        android:layout_margin="20dp"
+        android:onClick="hiMe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_w_start"
-        app:layout_constraintRight_toRightOf="@id/guideline_w_end"
+        android:layout_margin="20dp"
+        android:text="@string/login_login"
+        android:textColor="#212121"
         app:layout_constraintBottom_toBottomOf="@id/guideline_h_bot"
-        android:text="@string/login_login"/>
+        app:layout_constraintLeft_toLeftOf="@id/guideline_w_start"
+        app:layout_constraintRight_toRightOf="@id/guideline_w_end" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_h_top"

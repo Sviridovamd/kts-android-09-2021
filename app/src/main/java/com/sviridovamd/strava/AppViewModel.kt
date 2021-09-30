@@ -1,11 +1,15 @@
 package com.sviridovamd.strava
 
 import android.util.Patterns
+import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class AppViewModel() : ViewModel() {
+    // Public constructors
+    // https://developer.android.com/reference/android/arch/lifecycle/MutableLiveData
     private val loginEmailValidMutable = MutableLiveData(false)
     val loginEmailValid: LiveData<Boolean>
         get() = loginEmailValidMutable
@@ -40,9 +44,5 @@ class AppViewModel() : ViewModel() {
     companion object {
         private const val PASSWORD_MIN_LENGTH: Int = 8
     }
-
-
-
-
 
 }

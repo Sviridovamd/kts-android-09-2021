@@ -3,21 +3,26 @@ package com.sviridovamd.strava
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import timber.log.Timber
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.view.View as View
+
 
 class FragmantLogin : Fragment(R.layout.fragment_login) {
     private var pass: TextInputEditText? = null
     private var email: TextInputEditText? = null
     private var emailLayout: TextInputLayout? = null
     private var passLayout: TextInputLayout? = null
-    private var loginBtn: Button? = null
+    var loginBtn: Button? = null
     val model: AppViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -72,6 +77,7 @@ class FragmantLogin : Fragment(R.layout.fragment_login) {
             }
             return@setOnEditorActionListener (model.loginState.value != true)
         }
+
 
 
     }
